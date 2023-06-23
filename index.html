@@ -1,0 +1,845 @@
+<link
+  href="/SynergyDashboardUI/components/rrmleadnoc/css/style.css"
+  rel="stylesheet"
+/>
+<div class="john-trail card-detail">
+  <!-- Add "modal-not-include" to a div for which we dont want to show them in modal  -->
+  <span class="modal-not-include">
+    <span class="card-detail-title"><b>Resignation</b></span>
+    <!-- <button type="button" id="btnleaveDetail" class="btn btn-xs cmn-modal-ex-btn expandCommonDiv pull-right">
+            <i class="fa fa-expand"></i>
+        </button> -->
+    <!-- <button type="button" id="btnResign" onclick="openResign()" class="btn btn-success pull-right">
+            Resign your position
+        </button> -->
+    <hr />
+  </span>
+
+  <div class="row modal-not-include">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <table id="noDueTbl" class="table table-striped removetable">
+          <thead>
+            <th>No</th>
+            <th>Employee No</th>
+            <th>Resource Name</th>
+            <th>Project Involved</th>
+            <th>Billability History</th>
+            <th>Skillsets</th>
+            <th>Accepted</th>
+            <th>Rejected</th>
+            <th>Profile Status</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>1001</td>
+              <td>James</td>
+              <td>
+                <button
+                  class="btn btn-sm btn-primary-color"
+                  onclick="showProjtlist()"
+                >
+                  No of projects
+                </button>
+              </td>
+              <td>
+                <button
+                  class="btn btn-sm btn-primary-color"
+                  onclick="showBillHistory()"
+                >
+                  Billable Hrs
+                </button>
+              </td>
+              <td>
+                <button
+                  class="btn btn-sm btn-primary-color"
+                  onclick="showSkillsets()"
+                >
+                  PHP
+                </button>
+              </td>
+              <td>
+                <button
+                  class="btn btn-sm btn-primary-color"
+                  onclick="showHrApproval()"
+                >
+                  Accepted
+                </button>
+              </td>
+              <td>
+                <button
+                  class="btn btn-sm btn-primary-color"
+                  onclick="showHrReject()"
+                >
+                  Rejected
+                </button>
+              </td>
+              <td>
+                <button
+                  class="btn btn-sm btn-primary-color"
+                  onclick="showProfileClose()"
+                >
+                  closed
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>1001</td>
+              <td>Dinesh</td>
+              <td>
+                <button
+                  class="btn btn-sm btn-primary-color"
+                  onclick="showProjtlist()"
+                >
+                  No of projects
+                </button>
+              </td>
+              <td>
+                <button
+                  class="btn btn-sm btn-primary-color"
+                  onclick="showBillHistory()"
+                >
+                  Billable Hrs
+                </button>
+              </td>
+              <td>
+                <button
+                  class="btn btn-sm btn-primary-color"
+                  onclick="showSkillsets()"
+                >
+                  PHP
+                </button>
+              </td>
+              <td>
+                <button
+                  class="btn btn-sm btn-primary-color"
+                  onclick="showHrApproval()"
+                >
+                  Accepted
+                </button>
+              </td>
+              <td>
+                <button
+                  class="btn btn-sm btn-primary-color"
+                  onclick="showHrReject()"
+                >
+                  Rejected
+                </button>
+              </td>
+              <td>
+                <button
+                  class="btn btn-sm btn-primary-color"
+                  onclick="showProfileClose()"
+                >
+                  closed
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>1001</td>
+              <td>Ravi</td>
+              <td>
+                <button
+                  class="btn btn-sm btn-primary-color"
+                  onclick="showProjtlist()"
+                >
+                  No of projects
+                </button>
+              </td>
+              <td>
+                <button
+                  class="btn btn-sm btn-primary-color"
+                  onclick="showBillHistory()"
+                >
+                  Billable Hrs
+                </button>
+              </td>
+              <td>
+                <button
+                  class="btn btn-sm btn-primary-color"
+                  onclick="showSkillsets()"
+                >
+                  PHP
+                </button>
+              </td>
+              <td>
+                <button
+                  class="btn btn-sm btn-primary-color"
+                  onclick="showHrApproval()"
+                >
+                  Accepted
+                </button>
+              </td>
+              <td>
+                <button
+                  class="btn btn-sm btn-primary-color"
+                  onclick="showHrReject()"
+                >
+                  Rejected
+                </button>
+              </td>
+              <td>
+                <button
+                  class="btn btn-sm btn-primary-color"
+                  onclick="showProfileClose()"
+                >
+                  open
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<!--new-->
+<div class="john-trail card-detail">
+  <div class="row modal-not-include">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <table id="noDueTbl" class="table table-striped removetable">
+          <thead>
+            <tr>
+              <th
+                colspan="4"
+                style="text-align: left; background-color: red; color: white"
+              >
+                Project Details
+              </th>
+            </tr>
+            <tr style="background-color: rgb(221, 221, 221)">
+              <th>Employee No</th>
+              <th>Resource Name</th>
+              <th>Designation</th>
+              <th>Projects</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1001</td>
+              <td>James</td>
+              <td>Sr.Developer PHP</td>
+              <td>
+                <button
+                  class="btn btn-sm btn-primary-color"
+                  onclick="showProjectlist()"
+                >
+                  Project list
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Resignation Details modal-->
+<div
+  class="modal fade bd-example-modal-lg"
+  tabindex="-1"
+  id="modal-ResginationDetail"
+  role="dialog"
+  aria-labelledby="myLargeModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          &times;
+        </button>
+        <button class="expand modalExpanding">
+          <i class="fas fa-expand" data-toggle="modal"></i>
+        </button>
+        <h4 class="modal-title">Resignation Details</h4>
+      </div>
+      <div class="modal-body" data-simplebar>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-4 text-right">
+              <label>Employee name:</label>
+            </div>
+            <div class="col-md-6">
+              <label>Emp1</label>
+            </div>
+          </div>
+          <br />
+          <div class="row">
+            <div class="col-md-4 text-right">
+              <label>Resignation Details:</label>
+            </div>
+            <div class="col-md-6">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+                accusantium, repellendus dolorem nobis assumenda aspernatur
+                officia quisquam ad, modi itaque dolor accusamus illum facilis
+                sunt, quas iure suscipit reprehenderit facere!
+              </p>
+            </div>
+          </div>
+          <br />
+          <div class="row">
+            <div class="col-md-4 text-right">
+              <label>Notice Period</label>
+            </div>
+            <div class="col-md-4">
+              <select class="form-control" id="notice_period_selection">
+                <option value="">Select Number Of days</option>
+                <option value="30">30</option>
+                <option value="60">60</option>
+                <option value="90">90</option>
+                <option value="0">immediate</option>
+              </select>
+            </div>
+          </div>
+          <br />
+          <div class="row">
+            <div class="col-md-4 text-right">
+              <label>Expected Relieving Date:</label>
+            </div>
+            <div id="divNeedAlert" class="col-md-4">
+              <!-- <div class="input-group">
+                            <input type="date" id="dateNeedAlert" class="form-control reliveDate custom-datepicker" title="Set Date">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                        </div> -->
+              <span class="reliveDateView">N/A</span>
+            </div>
+          </div>
+
+          <br />
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-success"
+              data-dismiss="modal"
+              onclick=""
+            >
+              Save
+            </button>
+            <!-- <button id="btnSubmit" type="button" class="btn btn-primary" data-dismiss="modal" onclick="">Submit</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Resignation Details modal-->
+
+<!-- Project List modal-->
+<div
+  class="modal fade bd-example-modal-lg"
+  tabindex="-1"
+  id="modal-ProjectDetail"
+  role="dialog"
+  aria-labelledby="myLargeModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          &times;
+        </button>
+        <button class="expand modalExpanding">
+          <i class="fas fa-expand" data-toggle="modal"></i>
+        </button>
+        <h4 class="modal-title">Project List</h4>
+      </div>
+      <div class="modal-body" data-simplebar>
+        <div class="form-group">
+          <div class="panel panel-default">
+            <table id="noDueTbl" class="table table-striped removetable">
+              <thead>
+                <th>No</th>
+                <th>Project Name</th>
+                <th>Status</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>ABC Project</td>
+                  <td>Closed</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>XYZ Project</td>
+                  <td>Open</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <br />
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-success"
+              data-dismiss="modal"
+              onclick=""
+            >
+              Save
+            </button>
+            <!-- <button id="btnSubmit" type="button" class="btn btn-primary" data-dismiss="modal" onclick="">Submit</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Project List modal-->
+
+<!--Billing History modal-->
+<div
+  class="modal fade bd-example-modal-lg"
+  tabindex="-1"
+  id="modal-BillingHistory"
+  role="dialog"
+  aria-labelledby="myLargeModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          &times;
+        </button>
+        <button class="expand modalExpanding">
+          <i class="fas fa-expand" data-toggle="modal"></i>
+        </button>
+        <h4 class="modal-title">Billability History</h4>
+      </div>
+      <div class="modal-body" data-simplebar>
+        <div class="form-group">
+          <div class="panel panel-default">
+            <table id="noDueTbl" class="table table-striped removetable">
+              <thead>
+                <th>No</th>
+                <th>Project Name</th>
+                <th>Billed Hrs</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>ABC Project</td>
+                  <td>20</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>XYZ Project</td>
+                  <td>60</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <br />
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-success"
+              data-dismiss="modal"
+              onclick=""
+            >
+              Save
+            </button>
+            <!-- <button id="btnSubmit" type="button" class="btn btn-primary" data-dismiss="modal" onclick="">Submit</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Billing History modal-->
+
+<!--Skillsets modal-->
+<div
+  class="modal fade bd-example-modal-lg"
+  tabindex="-1"
+  id="modal-Skillsets"
+  role="dialog"
+  aria-labelledby="myLargeModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          &times;
+        </button>
+        <button class="expand modalExpanding">
+          <i class="fas fa-expand" data-toggle="modal"></i>
+        </button>
+        <h4 class="modal-title">Skillsets</h4>
+      </div>
+      <div class="modal-body" data-simplebar>
+        <div class="form-group">
+          <div class="panel panel-default">
+            <table id="noDueTbl" class="table table-striped removetable">
+              <thead>
+                <th>No</th>
+                <th>Skills</th>
+                <th>Comments</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>PHP-Laravel</td>
+                  <td>8.1.0</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Node Js</td>
+                  <td>14.0.0</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <br />
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-success"
+              data-dismiss="modal"
+              onclick=""
+            >
+              Save
+            </button>
+            <!-- <button id="btnSubmit" type="button" class="btn btn-primary" data-dismiss="modal" onclick="">Submit</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Skillsets modal-->
+
+<!-- HR Approval modal-->
+<div
+  class="modal fade bd-example-modal-lg"
+  tabindex="-1"
+  id="modal-HrApproval"
+  role="dialog"
+  aria-labelledby="myLargeModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          &times;
+        </button>
+        <button class="expand modalExpanding">
+          <i class="fas fa-expand" data-toggle="modal"></i>
+        </button>
+        <h4 class="modal-title">Resignation</h4>
+      </div>
+      <div class="modal-body" data-simplebar>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-4">
+              <label>HR Approval</label>
+            </div>
+          </div>
+          <br />
+          <div class="row">
+            <div class="col-md-4">
+              <label>Comments</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <textarea
+                name="nominee_comments"
+                id="nominee_comments"
+                class="form-control text-height"
+              ></textarea>
+            </div>
+          </div>
+          <br />
+
+          <div class="row">
+            <div class="col-md-2">
+              <label>Notice Period</label>
+            </div>
+            <div class="col-md-4">
+              <select class="form-control" id="notice_period_selection">
+                <option value="30">30</option>
+                <option value="60">60</option>
+                <option value="90">90</option>
+                <option value="0">immediate</option>
+              </select>
+            </div>
+          </div>
+
+          <br />
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-success"
+              data-dismiss="modal"
+              onclick=""
+            >
+              Approved
+            </button>
+            <!-- <button id="btnSubmit" type="button" class="btn btn-primary" data-dismiss="modal" onclick="">Submit</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HR Approval modal-->
+
+<!-- HR Reject modal-->
+<div
+  class="modal fade bd-example-modal-lg"
+  tabindex="-1"
+  id="modal-HrReject"
+  role="dialog"
+  aria-labelledby="myLargeModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          &times;
+        </button>
+        <button class="expand modalExpanding">
+          <i class="fas fa-expand" data-toggle="modal"></i>
+        </button>
+        <h4 class="modal-title">Resignation</h4>
+      </div>
+      <div class="modal-body" data-simplebar>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-4">
+              <label>HR Rejection</label>
+            </div>
+          </div>
+          <br />
+          <div class="row">
+            <div class="col-md-4">
+              <label>Comments</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <textarea
+                name="nominee_comments"
+                id="nominee_comments"
+                class="form-control text-height"
+              ></textarea>
+            </div>
+          </div>
+          <br />
+
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-fail"
+              data-dismiss="modal"
+              onclick=""
+            >
+              Rejected
+            </button>
+            <!-- <button id="btnSubmit" type="button" class="btn btn-primary" data-dismiss="modal" onclick="">Submit</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HR Reject modal-->
+
+<!-- HR Profilce Close modal-->
+<div
+  class="modal fade bd-example-modal-lg"
+  tabindex="-1"
+  id="modal-HrProfileclose"
+  role="dialog"
+  aria-labelledby="myLargeModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          &times;
+        </button>
+        <button class="expand modalExpanding">
+          <i class="fas fa-expand" data-toggle="modal"></i>
+        </button>
+        <h4 class="modal-title">Resignation</h4>
+      </div>
+      <div class="modal-body" data-simplebar>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-4">
+              <label>Profile Closing</label>
+            </div>
+          </div>
+          <br />
+          <div class="row">
+            <div class="col-md-4">
+              <label>Comments</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <textarea
+                name="nominee_comments"
+                id="nominee_comments"
+                class="form-control text-height"
+              ></textarea>
+            </div>
+          </div>
+          <br />
+
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-success"
+              data-dismiss="modal"
+              onclick=""
+            >
+              Save
+            </button>
+            <!-- <button id="btnSubmit" type="button" class="btn btn-primary" data-dismiss="modal" onclick="">Submit</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HR Profilce Close modal-->
+
+<!--NEW Project List modal-->
+<div
+  class="modal fade bd-example-modal-lg"
+  tabindex="-1"
+  id="modal-ProjectList"
+  role="dialog"
+  aria-labelledby="myLargeModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          &times;
+        </button>
+        <button class="expand modalExpanding">
+          <i class="fas fa-expand" data-toggle="modal"></i>
+        </button>
+        <h4 class="modal-title">Project List</h4>
+      </div>
+      <div class="modal-body" data-simplebar>
+        <div class="form-group">
+          <div class="panel panel-default">
+            <table id="noDueTbl" class="table table-striped removetable">
+              <thead style="background-color: rgb(221, 221, 221)">
+                <th>Project Name</th>
+                <th>Approved / Not Approved Status</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>ABC Project</td>
+                  <td >
+                    <label style="margin-right: 80px; ">
+                      <input type="radio" name="option1" value="yes"> Yes
+                    </label>
+                    <label>
+                      <input type="radio" name="option1" value="no"> No
+                    </label>
+                  </td>                  
+                </tr>
+                <tr>
+                  <td>XYZ Project</td>
+                  <td>
+                    <label style="margin-right: 80px;">
+                      <input type="radio" name="option2" value="yes"> Yes
+                    </label>
+                    <label>
+                      <input type="radio" name="option2" value="no"> No
+                    </label>
+                  </td>                  
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <br />
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-success"
+              data-dismiss="modal"
+              onclick=""
+            >
+              Save
+            </button>
+            <!-- <button id="btnSubmit" type="button" class="btn btn-primary" data-dismiss="modal" onclick="">Submit</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function showEmpAns() {
+    $("#modal-ResginationDetail").appendTo("body").modal("show");
+    $("#notice_period_selection").change(function () {
+      if ($(this).val() == "" || $(this).val() == " ") {
+        //console.log("Date is required")
+        $(".reliveDateView").html("N/A");
+        return;
+      }
+      let now = new Date();
+      now.setDate(now.getDate() + +$(this).val());
+      let day = ("0" + now.getDate()).slice(-2);
+      let month = ("0" + (now.getMonth() + 1)).slice(-2);
+      let today = now.getFullYear() + "-" + month + "-" + day;
+      // $('.reliveDate').val(today);
+      $(".reliveDateView").html(today);
+    });
+  }
+
+  function showProjtlist() {
+    $("#modal-ProjectDetail").appendTo("body").modal("show");
+  }
+
+  function showBillHistory() {
+    $("#modal-BillingHistory").appendTo("body").modal("show");
+  }
+
+  function showSkillsets() {
+    $("#modal-Skillsets").appendTo("body").modal("show");
+  }
+
+  function showHrApproval() {
+    $("#modal-HrApproval").appendTo("body").modal("show");
+  }
+
+  function showHrReject() {
+    $("#modal-HrReject").appendTo("body").modal("show");
+  }
+
+  function showProfileClose() {
+    $("#modal-HrProfileclose").appendTo("body").modal("show");
+  }
+  function showProjectlist() {
+    $("#modal-ProjectList").appendTo("body").modal("show");
+  }
+</script>
